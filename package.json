@@ -1,0 +1,30 @@
+{
+  "name": "aws-dashboard-server",
+  "version": "1.0.0",
+  "description": "sglearn project: aws lambda function for dashboard-servers",
+  "main": "lambda.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sglearn/aws-dashboard-server.git"
+  },
+  "author": "duongtdn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sglearn/aws-dashboard-server/issues"
+  },
+  "homepage": "https://github.com/sglearn/aws-dashboard-server#readme",
+  "dependencies": {
+    "@sglearn/dashboard-server": "^1.0.0",
+    "@sglearn/enrolldb-dynamodb-driver": "^1.0.0",
+    "@sglearn/invoicedb-dynamodb-driver": "^1.0.0",
+    "aws-sdk": "^2.341.0",
+    "aws-serverless-express": "^3.3.5",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "database-abstractor": "^1.0.0",
+    "express": "^4.16.4"
+  }
+}
