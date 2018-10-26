@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/sglearn/aws-dashboard-server#readme",
   "dependencies": {
-    "@sglearn/dashboard-server": "^1.0.0",
+    "@sglearn/dashboard-server": "^1.0.1",
     "@sglearn/enrolldb-dynamodb-driver": "^1.0.0",
     "@sglearn/invoicedb-dynamodb-driver": "^1.0.0",
     "aws-sdk": "^2.341.0",
