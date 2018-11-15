@@ -4,7 +4,7 @@ const aws = require('aws-sdk');
 const lambda = new aws.Lambda();
 
 function sendEmailFn(functionName) {
-  return function sendEmail({recipient, customer, invoice}, callback) {
+  return function sendEmail({recipient, courses, customer}, callback) {
 
     console.log(`Sending email to ${recipient}`)
 
@@ -12,7 +12,7 @@ function sendEmailFn(functionName) {
       {
         FunctionName: functionName,
         InvocationType: "Event",
-        Payload: JSON.stringify({recipient, customer, invoice}, null, 2)
+        Payload: JSON.stringify({recipient, courses, customer}, null, 2)
       },
       function(err, data) {
         if (err) {
@@ -41,7 +41,7 @@ enroll.use(require('@sglearn/enrolldb-dynamodb-driver')());
 
 api.useDatabase({ invoice, enroll })
 
-// api.helper({ sendEmail: sendEmailFn('SendEmailPurchaseOrder') })
+api.helper({ sendEmail: sendEmailFn('SendEmailNotifyEnrollActivated') })
 
 /* create express app from api */  
 const express = require('express')
